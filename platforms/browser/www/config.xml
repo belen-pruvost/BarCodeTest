@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.bcscanner" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <preference name="android-minSdkVersion" value="14" />
+    <feature name="Camera">
+        <param name="browser-package" value="Camera" />
+    </feature>
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <feature name="BarcodeScanner">
+        <param name="browser-package" value="BarcodeScanner" />
+    </feature>
+    <name>BCScanner</name>
+    <description>Hello World sample application that responds to the deviceready event.</description>
+    <author email="support@phonegap.com" href="http://phonegap.com">PhoneGap Team</author>
+    <content src="index.html" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="phonegap-version" value="cli-6.0.0" />
+    <preference name="android-build-tool" value="gradle" />
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+    <icon src="icon.png" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>
