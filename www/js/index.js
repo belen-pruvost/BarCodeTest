@@ -31,34 +31,19 @@ var app = {
 
     scan: function() {
         console.log('scanning');
-            cordova.plugins.barcodeScanner.scan(
+
+           cordova.plugins.barcodeScanner.scan(
                 function (result) {
-                    window.open(result.text,'_self', 'location=no') //Opens URL in browser
+                //    window.open(result.text,'_self', 'location=no') //Opens URL in browser
                   //alert("We got a barcode\n" +
                   //      "Result: " + result.text + "\n" +
                   //      "Format: " + result.format + "\n" +
                   //      "Cancelled: " + result.cancelled);
-              }, 
+              },
               function (error) {
-                  alert("Scanning failed: " + error);
+                  alert("Scanning failed 1321234: " + error);
               }
             );
-           
-    }    
+
+    }
 };
-
-function hasCameraPermission() {
-    cordova.plugins.barcodeScanner.hasCameraPermission().then(
-      function(result) {
-        // if this is 'false' you probably want to call 'requestCameraPermission' now
-        alert(result);
-      }
-    )
-  }
-
-  function requestCameraPermission(){
-    alert('antes requestCameraPermission');
-    // no callbacks required as this opens a popup which returns async
-    cordova.plugins.barcodeScanner.requestCameraPermission();
-    alert('paso requestCameraPermission');
-  }    
